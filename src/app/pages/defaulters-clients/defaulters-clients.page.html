@@ -1,0 +1,106 @@
+<ion-content color="light">
+  <ion-header color="light" mode="md">
+    <ion-toolbar mode="md" color="light">
+      <ion-row style="padding-left: 20px; padding-right: 20px" class="ion-align-items-center">
+        <ion-col class="ion-no-padding titleService" size="auto">
+          <ion-icon class="fs-px-18 titleService c-dark" (click)="glbFunc.irPage('home')"
+            name="chevron-back"></ion-icon>
+        </ion-col>
+        <ion-col class="ion-no-padding titleService ion-text-center fs-px-18 f-regular c-dark" css="margin-bottom">
+         Clientes Morosos
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+    <div class="mt-20 input-gen-row">
+      <ion-row class="ion-align-items-center">
+        <ion-col size="auto" style="padding-left: 25px;">
+          <ion-icon name='search-outline'></ion-icon>
+        </ion-col>
+        <ion-col class="ion-no-padding">
+          <ion-input mode="md" type="text" class="f-regular"
+            placeholder="Buscar Clientes Morosos..."></ion-input>
+        </ion-col>
+        <ion-col size="auto" style="padding-right: 20px;">
+          <ion-icon name='calendar-clear-outline'></ion-icon>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="pad-20-x">
+      <div class="scroll-gen mt-25">
+        <div class="scroll-x">
+          <div class="scroll-item">
+            <div class="filter-menu active f-medium fs-px-13 ion-text-center">Por Nombre</div>
+          </div>
+          <div class="scroll-item">
+            <div class="filter-menu f-medium fs-px-13 ion-text-center">Por Fecha</div>
+          </div>
+          <div class="scroll-item">
+            <div class="filter-menu f-medium fs-px-13 ion-text-center">Por ID</div>
+          </div>
+          <div class="scroll-item">
+            <div class="filter-menu f-medium fs-px-13 ion-text-center">Por Dirección</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-header>
+  <ion-content style="text-align: center; align-items: center;">
+    <ion-list style="margin-left: 20px; margin-top: 20px; margin-right: 20px; border: none;">
+      
+        <ion-item lines="none">
+            <ion-avatar slot="start">
+              <img src="https://www.gravatar.com/avatar?d=mp" alt="Avatar" />
+            </ion-avatar>
+    
+            <ion-label>
+              Manuel Rodriguez
+              <br />
+              <a mode="ios" class="f-regular" style="font-size: 10px; color: #464646;">
+                Ver Detalles
+              </a>
+            </ion-label>
+            <div slot="end" style="text-align: right;">
+              <div (click)="glbFunc.irPage('/black-list')" style="
+                    display: inline-block;
+                    padding: 4px 10px;
+                    font-size: 12px;
+                    border-radius: 10px;
+                    border: 1px solid #DE0000;
+                    color: #DE0000;
+                    background-color: #f2f2ff;
+                  ">
+                Agregar a lista negra
+              </div>
+            </div>
+          </ion-item>
+
+      <ion-item lines="none">
+        <ion-avatar slot="start">
+          <img src="https://www.gravatar.com/avatar?d=mp" alt="Avatar" />
+        </ion-avatar>
+
+        <ion-label>
+          Manuel Rodriguez
+          <br />
+          <a mode="ios" class="f-regular" style="font-size: 10px; color: #464646;">
+            Ver Detalles
+          </a>
+        </ion-label>
+        <div slot="end" style="text-align: right;">
+          <div (click)="glbFunc.irPage('/black-list')" style="
+                display: inline-block;
+                padding: 4px 10px;
+                font-size: 12px;
+                border-radius: 10px;
+                border: 1px solid #DE0000;
+                color: #DE0000;
+                background-color: #f2f2ff;
+              ">
+            Agregar a lista negra
+          </div>
+        </div>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-content>

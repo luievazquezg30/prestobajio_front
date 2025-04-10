@@ -1,0 +1,48 @@
+<ion-content color="light">
+    <div class="ion-text-center mt-120">
+        <img src="assets/img/logo.png" style="width: calc(100vw - 140px); max-width: 460px;"/>
+    </div>
+    <div class="pad-30-x" style="margin-top: 80px;">
+        <div class="c-dark f-semibold fs-px-18">Registar cuenta</div>
+        <div class="mt-25 input-gen">
+            <ion-row class="mt-20 input-gen-row">
+                <ion-col size="auto" style="padding-right: 20px;">
+                    <ion-input [(ngModel)]="user.email" mode="md" type="email" class="f-regular" placeholder="Nombre Completo"></ion-input>
+                </ion-col>
+                <ion-col size="auto" style="padding-right: 20px;">
+                    <ion-input [(ngModel)]="user.email" mode="md" type="email" class="f-regular" placeholder="INE"></ion-input>
+                </ion-col>
+                <ion-col size="auto" style="padding-right: 20px;">
+                    <ion-input [(ngModel)]="user.email" mode="md" type="email" class="f-regular" placeholder="Dirección"></ion-input>
+                </ion-col>
+                <ion-col size="auto" style="padding-right: 20px;">
+                    <ion-input [(ngModel)]="user.email" mode="md" type="email" class="f-regular" placeholder=" Correo Electronico"></ion-input>
+                </ion-col>
+                <ion-row>
+                    <ion-col size="auto" style="padding-right: 20px;">
+                        <ion-input [(ngModel)]="user.password" mode="md" [type]="showPass ? 'text' : 'password'" class="f-regular" placeholder="Contraseña"></ion-input>
+                    </ion-col>
+                    <ion-col size="auto" style="padding-right: 20px; margin-top: 20px;">
+                        <ion-icon (click)="showPass = !showPass" [name]="showPass ? 'eye-outline' : 'eye-off-outline'"></ion-icon>
+                    </ion-col>
+                </ion-row>
+                <ion-col size="auto" style="padding-right: 20px;">
+                    <ion-input [(ngModel)]="user.email" mode="md" type="email" class="f-regular" placeholder="Télefono Celular"></ion-input>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <ion-footer style="margin-bottom: 50px;">
+            <div style="margin-left: 35px; margin-right: 35px;" >
+                <ion-button mode="ios" (click)="login()" class="f-semibold fs-px-15" color="primary" expand="full" shape="round">Iniciar Sesión</ion-button>
+            </div>
+            <div class="mt-20">
+                <a mode="ios" (click)="login()" class="f-semibold" color="primary-tint" style="font-size: 16px;">
+                    <p style="color: #7C7C7C; font-family: f-regular; display: inline;">¿No tienes cuenta?</p>
+                    <p style="color: #593795; font-family: f-regular; margin-left: 5px; display: inline;">Registrate</p>
+                </a>
+            </div>
+        </ion-footer>        
+    </div>
+</ion-content>

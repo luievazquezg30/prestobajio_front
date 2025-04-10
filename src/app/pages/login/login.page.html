@@ -1,0 +1,39 @@
+<ion-content color="light">
+    <div class="ion-text-center mt-120">
+        <img src="assets/img/logo.png" style="width: calc(100vw - 140px); max-width: 460px;"/>
+    </div>
+    <div class="mt-130 pad-30-x">
+        <div class="c-dark f-semibold fs-px-18">Iniciar Sesión</div>
+        <div class="mt-25 input-gen">
+            <ion-input [(ngModel)]="user.email" mode="md" type="email" class="f-regular" placeholder="Correo Electrónico"></ion-input>
+        </div>
+        <div class="mt-20 input-gen-row">
+            <ion-row class="ion-align-items-center">
+                <ion-col class="ion-no-padding">
+                    <ion-input [(ngModel)]="user.password" mode="md" [type]="showPass ? 'text' : 'password'" class="f-regular" placeholder="Contraseña"></ion-input>
+                </ion-col>
+                <ion-col size="auto" style="padding-right: 20px;">
+                    <ion-icon (click)="showPass = !showPass" [name]="showPass ? 'eye-outline' : 'eye-off-outline'"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </div>
+        <ion-row class="mt-10 ion-align-items-center">
+            <ion-col class="ion-no-padding">
+            </ion-col>
+            <ion-col size="auto" style="padding-top: 0; padding-bottom: 0;">
+                <div class="f-medium fs-px-12 c-primary">¿Olvidaste tu contraseña?</div>
+            </ion-col>
+        </ion-row>
+        <ion-button mode="ios" (click)="login()" class="f-semibold fs-px-15 mt-40" color="primary" expand="full" shape="round">Iniciar Sesión</ion-button>
+    </div>
+    <div style="text-align: center;">
+        <ion-footer style="margin-top: 150px;">
+            <div>
+                <a mode="ios" (click)="glbFunc.openRegisterAcc()" class="f-semibold" color="primary-tint" style="font-size: 16px;">
+                    <p style="color: #7C7C7C; font-family: f-regular; display: inline;">¿No tienes cuenta?</p>
+                    <p style="color: #593795; font-family: f-regular; margin-left: 5px; display: inline;">Registrate</p>
+                </a>
+            </div>
+        </ion-footer>        
+    </div>
+</ion-content>

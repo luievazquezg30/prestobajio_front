@@ -1,0 +1,291 @@
+<ion-menu contentId="main-content" mode="ios">
+    <ion-header mode="ios" color="light">
+        <ion-toolbar mode="ios" color="light">
+            <ion-row class="ion-align-items-center mt-10">
+                <ion-col size="auto" class="ion-no-padding" style="padding-left: 16px;">
+                    <div (click)="closeMenu();" class="close">
+                        <ion-icon name="close"></ion-icon>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <div class="pad-30-x">
+            <div class="mt-40" style="padding-top: 10px; padding-bottom: 10px;">
+                <ion-row (click)="closeMenu()" class="ion-align-items-center">
+                    <ion-col size="auto" class="ion-no-padding">
+                        <ion-icon class="fs-px-22 c-dark" name="home-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col class="ion-no-padding" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="f-regular fs-px-16">Home</div>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div class="mt-30" style="padding-top: 10px; padding-bottom: 10px;">
+                <ion-row (click)="glbFunc.irPage('/comissions')" class="ion-align-items-center">
+                    <ion-col size="auto" class="ion-no-padding">
+                        <ion-icon class="fs-px-22 c-dark" name="git-commit-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col class="ion-no-padding" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="f-regular fs-px-16">Mis Comisiones</div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="mt-30" style="padding-top: 10px; padding-bottom: 10px;">
+                <ion-row (click)="glbFunc.irPage('/generated-sale')" class="ion-align-items-center">
+                    <ion-col size="auto" class="ion-no-padding">
+                        <ion-icon class="fs-px-22 c-dark" name="cash-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col class="ion-no-padding" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="f-regular fs-px-16">Ventas Generadas</div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="mt-30" style="padding-top: 10px; padding-bottom: 10px;">
+                <ion-row (click)="glbFunc.irPage('/pending-payment')" class="ion-align-items-center">
+                    <ion-col size="auto" class="ion-no-padding">
+                        <ion-icon class="fs-px-22 c-dark" name="receipt-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col class="ion-no-padding" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="f-regular fs-px-16">Cobros Pendientes</div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="mt-30" style="padding-top: 10px; padding-bottom: 10px;">
+                <ion-row (click)="glbFunc.irPage('/add-note')" class="ion-align-items-center">
+                    <ion-col size="auto" class="ion-no-padding">
+                        <ion-icon class="fs-px-22 c-dark" name="person-add-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col class="ion-no-padding" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="f-regular fs-px-16">Nuevo Cliente</div>
+                    </ion-col>
+                </ion-row>
+            </div>
+            
+            <div class="mt-30" style="padding-top: 10px; padding-bottom: 10px;">
+                <ion-row (click)="glbFunc.irPage('/client-list')" class="ion-align-items-center">
+                    <ion-col size="auto" class="ion-no-padding">
+                        <ion-icon class="fs-px-22 c-dark" name="accessibility"></ion-icon>
+                    </ion-col>
+                    <ion-col class="ion-no-padding" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="f-regular fs-px-16">Lista de Clientes</div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="mt-30" style="padding-top: 10px; padding-bottom: 10px;">
+                <ion-row (click)="glbFunc.irPage('/defaulters-clients')" class="ion-align-items-center">
+                    <ion-col size="auto" class="ion-no-padding">
+                        <ion-icon class="fs-px-22 c-dark" name="accessibility-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col class="ion-no-padding" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="f-regular fs-px-16">Clientes Morosos</div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="mt-30" style="padding-top: 10px; padding-bottom: 10px;">
+                <ion-row (click)="glbFunc.irPage('/black-list')" class="ion-align-items-center">
+                    <ion-col size="auto" class="ion-no-padding">
+                        <ion-icon class="fs-px-22 c-dark" name="reader-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col class="ion-no-padding" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="f-regular fs-px-16" >Lista Negra</div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="mt-30" style="padding-top: 10px; padding-bottom: 10px;">
+                <ion-row (click)="glbFunc.irPage('/closure')" class="ion-align-items-center">
+                    <ion-col size="auto" class="ion-no-padding">
+                        <ion-icon class="fs-px-22 c-dark" name="person-remove-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col class="ion-no-padding" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="f-regular fs-px-16">Cortes</div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div class="mt-30" style="padding-top: 10px; padding-bottom: 10px;">
+                <ion-row (click)="logout()" class="ion-align-items-center">
+                    <ion-col size="auto" class="ion-no-padding">
+                        <ion-icon class="fs-px-22 c-dark" name="log-out-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col class="ion-no-padding" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="f-regular fs-px-16">Cerrar Sesión</div>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <ion-button (click)="glbFunc.irPage('/commissions-list')" class="f-semibold fs-px-15 mt-40" color="primary" expand="full" mode="ios"
+                shape="round"><ion-icon name="cog-outline"></ion-icon>&nbsp;&nbsp;&nbsp;Registrar Pago</ion-button>
+        </div>
+    </ion-content>
+</ion-menu>
+<ion-header mode="ios" color="light">
+    <ion-toolbar mode="ios" color="light">
+        <ion-row class="ion-align-items-center mt-10">
+            <ion-col size="auto" class="ion-no-padding" style="padding-left: 16px;">
+                <div (click)="openMenu()" class="menu">
+                    <ion-icon name="menu"></ion-icon>
+                </div>
+            </ion-col>
+            <ion-col class="ion-no-padding" style="padding-left: 15px;">
+                <div class="fs-px-14 c-secondary f-regular">Bienvenido</div>
+                <div class="fs-px-14 c-tertiary f-medium">{{user?.name}}</div>
+            </ion-col>
+            <ion-col size="auto" class="ion-no-padding" style="padding-left: 15px;position: relative;">
+                <ion-icon (click)="glbFunc.irPage('/notifications')" class="header-noti" name="notifications-outline"></ion-icon>
+                <div class="custom-badge" style="background: var(--ion-color-primary);">
+                    <span>1</span>
+                </div>
+            </ion-col>
+            <ion-col size="auto" class="ion-no-padding" style="padding-left: 15px; padding-right: 16px;">
+                <img (click)="glbFunc.irPage('/my-profile')" class="img-perfil" src="assets/img/custom/logo.png" alt="">
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content id="main-content" color="light">
+    <ion-grid>
+        <ion-row class="ion-align-items-center" style="margin-left: 30px;">
+            <ion-col size="6" class="ion-no-padding mb-5" style="padding-right: 6px;">
+                <h1 class="fs-px-14" style="color: #989898;">Ventas Generadas</h1>
+                <h2 class="fs-px-31">$13,370.96</h2>
+                <ion-button color="success" size="small" class="fs-px-11">¡Buen Trabajo!</ion-button>
+                <ion-button fill="clear" size="small" class="fs-px-11">Ver Reporte <ion-icon
+                        name="chevron-forward-outline" size="small"></ion-icon></ion-button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+
+            <!-- Mis Comisiones -->
+            <ion-col size="6" class="ion-no-padding" style="padding-right: 6px;">
+                <ion-card (click)="glbFunc.irPage('/comissions')">
+                    <ion-card-header>
+                        <ion-card-subtitle class="mt-10 fs-px-11">Actualizado en Jun, 2024</ion-card-subtitle>
+                        <ion-card-title class="fs-px-14 f-regular">Mis Comisiones</ion-card-title>
+                        <div class="icons">
+                            <ion-icon name="cash-outline" size="small" class="mb-10"></ion-icon>
+                            <ion-icon name="arrow-forward-outline" size="small" class="mb-10"></ion-icon>
+                        </div>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <h3 class="fs-px-14">$3,350.96 <ion-text color="success">12%</ion-text></h3>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+
+
+            <!-- Ventas Generadas -->
+            <ion-col size="6" class="ion-no-padding" style="padding-right: 6px;">
+                <ion-card (click)="glbFunc.irPage('/generated-sale')"> 
+                    <ion-card-header >
+                        <ion-card-subtitle class="mt-10 fs-px-11">Actualizado en Jun, 2024</ion-card-subtitle>
+                        <ion-card-title class="fs-px-14 f-regular">Ventas Generadas</ion-card-title>
+                        <div class="icons">
+                            <ion-icon name="cash-outline" size="small" class="mb-10"></ion-icon>
+                            <ion-icon name="arrow-forward-outline"  size="small" class="mb-10"></ion-icon>
+                        </div>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <h3 class="fs-px-11">$13,370.96 <ion-text color="success">26%</ion-text> </h3>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <!-- Cobros Pendientes -->
+            <ion-col size="6" class="ion-no-padding mb-5" style="padding-right: 6px;">
+                <ion-card>
+                    <ion-card-header (click)="glbFunc.irPage('/pending-payment')">
+                        <ion-card-subtitle class="mt-10 fs-px-11">Faltan 4 Cobros</ion-card-subtitle>
+                        <ion-card-title class="fs-px-14 f-regular">Cobros Pendientes</ion-card-title>
+                        <div class="icons">
+                            <ion-icon name="cash-outline" size="small" class="mb-10"></ion-icon>
+                            <ion-icon name="arrow-forward-outline" size="small" class="mb-10"></ion-icon>
+                        </div>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-progress-bar value="0.2"><ion-text color="success">20%</ion-text></ion-progress-bar>
+
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+            <!-- Registrar Pago -->
+            <ion-col size="6" class="ion-no-padding mb-5" style="padding-right: 6px;">
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-subtitle class="mt-10 fs-px-11">Inscribe un pago reciente</ion-card-subtitle>
+                        <ion-card-title class="fs-px-14 f-regular">Registrar Pago</ion-card-title>
+                        <div class="icons">
+                            <ion-icon name="cash-outline" size="small" class="mb-10"></ion-icon>
+                            <ion-icon name="arrow-forward-outline" size="small" class="mb-10"></ion-icon>
+                        </div>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-text fill="clear" color="primary" class="fs-px-13"
+                            style="cursor: pointer;">Registrar</ion-text>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <!-- Nuevo Cliente -->
+            <ion-col size="6" class="ion-no-padding mb-5" style="padding-right: 6px;">
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-subtitle class="mt-10 fs-px-11">Agrega un nuevo cliente</ion-card-subtitle>
+                        <ion-card-title class="fs-px-14 f-regular">Nuevo Cliente</ion-card-title>
+                        <div class="icons">
+                            <ion-icon name="cash-outline" size="small" class="mb-10"></ion-icon>
+                            <ion-icon name="arrow-forward-outline" size="small" class="mb-10"></ion-icon>
+                        </div>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-text fill="clear" color="primary" class="fs-px-13"
+                            style="cursor: pointer;">Agregar</ion-text>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+            <!-- Nueva Venta -->
+            <ion-col size="6" class="ion-no-padding mb-5" style="padding-right: 6px;">
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-subtitle class="mt-10 fs-px-11">O renovación de crédito</ion-card-subtitle>
+                        <ion-card-title class="fs-px-14 f-regular">Nueva Venta</ion-card-title>
+                        <div class="icons">
+                            <ion-icon name="cash-outline" size="small" class="mb-10"></ion-icon>
+                            <ion-icon name="arrow-forward-outline" size="small" class="mb-10"></ion-icon>
+                        </div>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-text fill="clear" color="primary" class="fs-px-13"
+                            style="cursor: pointer;">Registrar</ion-text>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-footer class="ion-align-items-center">
+        <ion-row class="ion-justify-content-center ion-align-items-center mb-15">
+          <!-- Nueva Venta o Renovación de Crédito -->
+          <ion-col size="auto">
+            <ion-button expand="block" color="primary"><ion-icon src="assets/img/bg-cash.svg" style="padding-right: 5px;"></ion-icon> Nueva Venta o Renovación de Crédito</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-footer>
+      
+
+</ion-content>

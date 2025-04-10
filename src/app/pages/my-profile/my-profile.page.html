@@ -1,0 +1,39 @@
+<ion-header mode="ios" color="light">
+    <ion-toolbar mode="ios" color="light">
+        <ion-row class="ion-align-items-center mt-10">
+            <ion-col size="auto" class="ion-no-padding" style="padding-left: 16px;">
+                <div (click)="glbFunc.back()" class="back-icon">
+                    <ion-icon name="chevron-back"></ion-icon>
+                </div>
+            </ion-col>
+            <ion-col class="ion-no-padding ion-text-center">
+                <div class="fs-px-18 c-dark f-semibold">Mis Datos</div>
+            </ion-col>
+            <ion-col size="auto" class="ion-no-padding invisible" style="padding-right: 16px;">
+                <div class="back-icon">
+                    <ion-icon name="chevron-back"></ion-icon>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+<ion-content id="main-content" color="light">
+    <div class="pad-25-x">
+        <ion-item mode="ios" class="input-item-gen mt-60">
+            <ion-input mode="ios" class="f-medium" label="Responsable" labelPlacement="stacked" placeholder="Responsable" value="Juan Pérez"></ion-input>
+        </ion-item>
+        <ion-item mode="ios" class="input-item-gen mt-20">
+            <ion-input mode="ios" class="f-medium" label="Nombre" labelPlacement="stacked" placeholder="Nombre" value="Mecánico Juan"></ion-input>
+        </ion-item>
+        <ion-item mode="ios" class="input-item-gen mt-20">
+            <ion-input mode="ios" class="f-medium" label="Dirección" labelPlacement="stacked" placeholder="Dirección" value="Puerta de Hierro 2391"></ion-input>
+        </ion-item>
+        <ion-item mode="ios" class="input-item-gen mt-20">
+            <ion-input mode="ios" class="f-medium" label="Teléfono" labelPlacement="stacked" placeholder="Teléfono" value="333 458 2034"></ion-input>
+        </ion-item>
+        <ion-item mode="ios" class="input-item-gen mt-20">
+            <ion-input mode="ios" class="f-medium" label="Correo Electrónico" labelPlacement="stacked" placeholder="Correo Electrónico" value="mecanicojuan@gmail.com"></ion-input>
+        </ion-item>
+        <ion-button class="f-semibold fs-px-15 mt-70" color="primary" expand="full" mode="ios" shape="round">Guardar Cambios</ion-button>
+    </div>
+</ion-content>

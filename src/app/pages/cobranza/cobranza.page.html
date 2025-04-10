@@ -1,0 +1,130 @@
+<ion-header color="light" mode="md">
+    <ion-toolbar mode="md" color="light">
+      <ion-row style="padding-left: 20px; padding-right: 20px" class="ion-align-items-center">
+          <ion-col class="ion-no-padding titleService" size="auto">
+            <ion-icon class="fs-px-18 titleService c-dark" (click)="glbFunc.back()" name="chevron-back"></ion-icon>
+          </ion-col>
+            <ion-col class="ion-no-padding titleService ion-text-center fs-px-18 f-regular c-dark" css="margin-bottom">
+              Cobranza
+          </ion-col>
+      </ion-row>
+    </ion-toolbar>
+</ion-header>
+<ion-content style="text-align: center; align-items: center;">
+
+  <ion-list style="margin-left: 20px; margin-top: 70px; margin-right: 20px; border: none; margin-bottom: 15px;">
+
+    <ion-item lines="none">
+        <ion-avatar slot="start">
+           <img src="assets/img/av-co.jpeg" alt="Avatar" />
+        </ion-avatar>
+          
+        <ion-label>
+            <p class="name-user"> Manuel Rodriguez</p>
+              <div style="display: inline-flex;" (click)="glbFunc.irPage('/ticket-client')">
+                <ion-icon src="assets/img/ic-palomita.svg" style="width: 15px; height: 15px;"></ion-icon><p class="alCorriente">Al Corriente</p>    
+              </div>
+                
+        </ion-label> 
+    </ion-item>
+            
+  </ion-list>
+
+  <ion-grid>
+    
+
+    <ion-row>
+
+        <!-- Estado de cuenta -->
+        <ion-col size="6" class="ion-no-padding" style="padding-right: 6px;" style="text-align: left;">
+            <ion-card (click)="glbFunc.irPage('/comissions')">
+                <ion-card-header >
+                    <ion-card-subtitle style="font-family: 15px; font-family: f-semibold;">
+                      <div style="color: black;">
+                        <ion-icon src="assets/img/ic-money.svg" style="width: 20px; height: 20px;"></ion-icon>
+                        <ion-icon name="arrow-forward-outline" style="width: 20px; height: 20px; margin-left: 70%;"></ion-icon>
+                    </div>
+
+                    </ion-card-subtitle>
+                    <ion-card-title class="title-card">
+                      Estado de cuenta
+                      <p class="inf-fecha">Actualizado en Jun, 2024</p>
+                      <h3 class="txt-details">Ver Detalles</h3>
+                    </ion-card-title>
+                </ion-card-header>
+            </ion-card>
+        </ion-col>
+
+
+
+        <!-- Reporte de pagos -->
+        <ion-col size="6" class="ion-no-padding" style="padding-right: 6px;" style="text-align: left;">
+          <ion-card (click)="glbFunc.irPage('/comissions')">
+              <ion-card-header >
+                  <ion-card-subtitle style="font-family: 15px; font-family: f-semibold;">
+                    <div style="color: black;">
+                      <ion-icon src="assets/img/ic-money.svg" style="width: 20px; height: 20px;"></ion-icon>
+                      <ion-icon name="arrow-forward-outline" style="width: 20px; height: 20px; margin-left: 70%;"></ion-icon>
+                  </div>
+
+                  </ion-card-subtitle>
+                  <ion-card-title class="title-card">
+                    Reporte de Pagos
+                    <p class="inf-fecha">Actualizado en Jun, 2024</p>
+                    <h3 class="txt-details">Ver Historial</h3>
+                  </ion-card-title>
+              </ion-card-header>
+          </ion-card>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+        <!-- Recibos de PDF -->
+        <ion-col size="6" class="ion-no-padding" style="padding-right: 6px;" style="text-align: left;">
+            <ion-card (click)="glbFunc.irPage('/comissions')">
+                <ion-card-header >
+                    <ion-card-subtitle style="font-family: 15px; font-family: f-semibold;">
+                      <div style="color: black;">
+                        <ion-icon src="assets/img/ic-money.svg" style="width: 20px; height: 20px;"></ion-icon>
+                        <ion-icon name="arrow-forward-outline" style="width: 20px; height: 20px; margin-left: 70%;"></ion-icon>
+                    </div>
+
+                    </ion-card-subtitle>
+                    <ion-card-title class="title-card">
+                      Recibos en PDF
+                      <p class="inf-fecha">Actualizado en Jun, 2024</p>
+                      <h3 class="txt-details">Ver Detalles</h3>
+                    </ion-card-title>
+                </ion-card-header>
+            </ion-card>
+        </ion-col>
+
+        <!-- Lista de Tickets -->
+        <ion-col size="6" class="ion-no-padding" style="padding-right: 6px;" style="text-align: left;">
+          <ion-card (click)="glbFunc.irPage('/comissions')">
+              <ion-card-header >
+                  <ion-card-subtitle style="font-family: 15px; font-family: f-semibold;">
+                    <div style="color: black;">
+                      <ion-icon src="assets/img/ic-money.svg" style="width: 20px; height: 20px;"></ion-icon>
+                      <ion-icon name="arrow-forward-outline" style="width: 20px; height: 20px; margin-left: 70%;"></ion-icon>
+                  </div>
+
+                  </ion-card-subtitle>
+                  <ion-card-title class="title-card">
+                    Lista de Tickets
+                    <p class="inf-fecha">Actualizado en Jun, 2024</p>
+                    <h3 class="txt-details">Ver Detalles</h3>
+                  </ion-card-title>
+              </ion-card-header>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    <ion-footer>
+      <ion-button class="f-semibold fs-px-15 mt-120"   color="primary" style="width: 90%;" mode="ios"
+                  shape="round">Guardar y Continuar</ion-button>
+    </ion-footer>
+</ion-content>
+     
+

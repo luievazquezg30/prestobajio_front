@@ -1,0 +1,9 @@
+<ion-content [fullscreen]="true" class="bg-content" style="background-image: url('assets/img/logo-onboarding.png');">
+    <div class="bg-content">
+        <img class="center-page" src="assets/img/logo-white.png" style="width: calc(100vw - 60px); max-width: 460px; bottom: unset; top: 140px;"/>
+        <div class="center-page" style="width: calc(100vw - 60px); max-width: 460px; top: unset; bottom: 70px;">
+            <ion-button mode="ios" (click)="glbFunc.irPage('/login')" class="f-semibold fs-px-15" color="primary" expand="full" shape="round">Iniciar Sesión</ion-button>
+            <ion-button mode="ios" style="margin-top: 15px;" (click)="glbFunc.openRegisterAcc()" class="f-semibold fs-px-15" color="light" expand="full" shape="round">Crear cuenta</ion-button>
+        </div>
+    </div>    
+</ion-content>

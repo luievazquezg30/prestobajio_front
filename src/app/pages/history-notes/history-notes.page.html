@@ -1,0 +1,76 @@
+<ion-header mode="ios" color="light">
+    <ion-toolbar mode="ios" color="light">
+        <ion-row class="ion-align-items-center mt-10">
+            <ion-col size="auto" class="ion-no-padding" style="padding-left: 16px;">
+                <div (click)="glbFunc.back()" class="back-icon">
+                    <ion-icon name="chevron-back"></ion-icon>
+                </div>
+            </ion-col>
+            <ion-col class="ion-no-padding ion-text-center">
+                <div class="fs-px-18 c-dark f-semibold">Historial de Notas</div>
+            </ion-col>
+            <ion-col size="auto" class="ion-no-padding invisible" style="padding-right: 16px;">
+                <div class="back-icon">
+                    <ion-icon name="chevron-back"></ion-icon>
+                </div>
+            </ion-col>
+        </ion-row>
+        <div class="pad-20-x mt-20">
+            <ion-searchbar class="ion-no-padding f-regular" color="light" mode="ios" placeholder="Buscar"></ion-searchbar>
+        </div>
+        <div class="pad-20-x">
+            <div class="scroll-gen mt-25">
+                <div class="scroll-x">
+                    <div class="scroll-item">
+                      <div class="filter-menu active f-medium fs-px-13 ion-text-center">Activos</div>
+                    </div>
+                    <div class="scroll-item">
+                        <div class="filter-menu f-medium fs-px-13 ion-text-center">Proceso</div>
+                    </div>
+                    <div class="scroll-item">
+                        <div class="filter-menu f-medium fs-px-13 ion-text-center">Liquidado</div>
+                    </div>
+                    <div class="scroll-item">
+                        <div class="filter-menu f-medium fs-px-13 ion-text-center">Todos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-toolbar>
+</ion-header>
+<ion-content id="main-content" color="light">
+    <div class="ion-text-center" *ngIf="isLoading">
+        <ion-spinner
+        ></ion-spinner>
+    </div>
+    <div class="pad-20-x" *ngIf="!isLoading">
+        <div *ngFor="let note of notes; let i = index">
+            <ion-row class="list-note mt-25 ion-align-items-center">
+                <ion-col size="auto" class="ion-no-padding img-auto" style="background-image: url('{{note.car.photo}}');">
+                    <div style="width: 120px;"></div>
+                </ion-col>
+                <ion-col class="ion-no-padding" style="padding-left: 20px;">
+                    <ion-row class="ion-align-items-center">
+                        <ion-col class="ion-no-padding">
+                            <div class="mt-5 f-semibold fs-px-16 c-dark">{{note.car.name}}</div>
+                        </ion-col>
+                        <ion-col class="ion-no-padding" size="auto" style="padding-left: 10px;">
+                            <ion-icon class="c-dark fs-px-14" name="ellipsis-vertical"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                    <div class="mt-5 f-medium fs-px-13" style="color: #878787;">{{note.name}}</div>
+                    <ion-row class="ion-align-items-center">
+                        <ion-col class="ion-no-padding">
+                            <div class="mt-20 f-semibold fs-px-16 c-dark">{{note.price | currency}}</div>
+                        </ion-col>
+                        <ion-col class="ion-no-padding" size="auto" style="padding-left: 10px;">
+                            <div class="mt-10 badge-auto f-medium fs-px-14">{{note.status_label}}</div>
+                        </ion-col>
+                    </ion-row>
+                    
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+    
+</ion-content>

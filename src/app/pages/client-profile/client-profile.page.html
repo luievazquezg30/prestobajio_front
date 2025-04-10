@@ -1,0 +1,70 @@
+<ion-header color="light" mode="md">
+    <ion-toolbar mode="md" color="light">
+      <ion-row style="padding-left: 20px; padding-right: 20px" class="ion-align-items-center">
+          <ion-col class="ion-no-padding titleService" size="auto">
+            <ion-icon class="fs-px-18 titleService c-dark" (click)="glbFunc.back()" name="chevron-back"></ion-icon>
+          </ion-col>
+            <ion-col class="ion-no-padding titleService ion-text-center fs-px-18 f-regular c-dark" css="margin-bottom">
+              Perfil del Cliente
+          </ion-col>
+      </ion-row>
+    </ion-toolbar>
+</ion-header>
+<ion-content style="text-align: center; align-items: center;">
+    <ion-list style="margin-left: 20px; margin-top: 70px; margin-right: 20px; border: none; ">
+
+      <ion-item lines="none">
+          <ion-avatar slot="start">
+             <img src="assets/img/av-co.jpeg" alt="Avatar" />
+          </ion-avatar>
+            
+          <ion-label>
+              <p class="name-user"> Manuel Rodriguez</p>
+                <div style="display: inline-flex;" (click)="glbFunc.irPage('/ticket-client')">
+                  <ion-icon src="assets/img/ic-palomita.svg" style="width: 15px; height: 15px;"></ion-icon><p class="alCorriente">Al Corriente</p>    
+                </div>
+                  
+          </ion-label> 
+      </ion-item>
+              
+    </ion-list>
+
+    <ion-list style="margin-left: 20px; margin-top: 20px; margin-right: 20px; border: none; ">
+        <ion-item lines="none">
+          <ion-label>
+            <p class="label-badge"> Detalles del perfil </p>
+          </ion-label>
+            <ion-badge>Editar &nbsp; ></ion-badge>
+          </ion-item>
+
+        <ion-item lines="none">
+          <ion-label>
+            <p class="label-badge"> Historial de prestamos </p>
+          </ion-label>
+            <ion-badge>Editar &nbsp; ></ion-badge>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label>
+            <p class="label-badge"> Documentos cargados </p>
+          </ion-label>
+          <ion-badge>Editar &nbsp; ></ion-badge>
+        </ion-item>
+
+        <ion-item lines="none" (click)="glbFunc.irPage('/cobranza')">
+          <ion-label>
+            <p class="label-badge"> Cobranza </p>
+          </ion-label>
+            <ion-badge>Ver Más &nbsp; ></ion-badge>
+        </ion-item>
+
+
+    </ion-list>
+
+    <ion-footer>
+      <ion-button class="f-semibold fs-px-15 mt-120"   color="primary" style="width: 80%;" mode="ios"
+                  shape="round">Guardar y Continuar</ion-button>
+    </ion-footer>
+</ion-content>
+     
+

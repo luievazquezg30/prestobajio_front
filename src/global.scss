@@ -1,0 +1,824 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+.alertvacio .loading-content {
+    display: none;
+}
+
+.btn-back-float {
+    position: absolute;
+    z-index: 99;
+    top: 15px;
+    left: 15px;
+    font-size: 32px;
+}
+
+@font-face {
+    font-family: 'Manrope Thin';
+    src: url('./assets/fonts/manrope-thin.otf');//mine
+}
+
+*.f-thin {
+    font-family: 'Manrope Thin';
+    --ion-font-family: 'Manrope Thin';
+}
+
+@font-face {
+    font-family: 'Manrope Light';
+    src: url('./assets/fonts/manrope-light.otf');//mine
+}
+
+*.f-light {
+    font-family: 'Manrope Light';
+    --ion-font-family: 'Manrope Light';
+}
+
+@font-face {
+    font-family: 'Manrope Medium';
+    src: url('./assets/fonts/manrope-medium.otf');//mine
+}
+
+*.f-medium {
+    font-family: 'Manrope Medium';
+    --ion-font-family: 'Manrope Medium';
+}
+
+@font-face {
+    font-family: 'Manrope Regular';
+    src: url('./assets/fonts/manrope-regular.otf');//mine
+}
+
+*.f-regular {
+    font-family: 'Manrope Regular';
+    --ion-font-family: 'Manrope Regular';
+}
+
+@font-face {
+    font-family: 'Manrope Semibold';
+    src: url('./assets/fonts/manrope-semibold.otf');//mine
+}
+
+*.f-semibold {
+    font-family: 'Manrope Semibold';
+    --ion-font-family: 'Manrope Semibold';
+}
+
+@font-face {
+    font-family: 'Manrope Bold';
+    src: url('./assets/fonts/manrope-bold.otf');//mine
+}
+
+*.f-bold {
+    font-family: 'Manrope Bold';
+    --ion-font-family: 'Manrope Bold';
+}
+
+@font-face {
+    font-family: 'Manrope Extrabold';
+    src: url('./assets/fonts/manrope-extrabold.otf');//mine
+}
+
+*.f-extrabold {
+    font-family: 'Manrope Extrabold';
+    --ion-font-family: 'Manrope Extrabold';
+}
+
+.bg-content {
+    --background: unset;    
+    background-size: cover;
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+.center-page {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.pad-30-x {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.pad-25-x {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.pad-20-x {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.input-gen {
+    .input-label {
+        color: var(--ion-color-dark);
+        font-size: 15px;
+    }
+    ion-input {
+        border: 1px solid #EDEDED;
+        font-size: 12px;
+        border-radius: 15px;
+        --highlight-color-focused: unset;
+        --highlight-color-valid: unset;
+        --highlight-color-invalid: unset;
+        --highlight-color: unset;
+        --padding-start: 20px;
+        --padding-end: 20px;
+        min-height: 55px;
+        color: #8D8D8D;
+    }
+    ion-select {
+        border: 1px solid var(--ion-color-medium);
+        font-size: 15pt;
+        border-radius: 5px;
+        --highlight-color-focused: unset;
+        --highlight-color-valid: unset;
+        --highlight-color-invalid: unset;
+        --highlight-color: unset;
+        --padding-start: 25px;
+        --padding-end: 25px;
+        min-height: 50px;
+        &::part(icon) {
+            position: absolute;
+            right: 22px;
+        }
+    }
+
+    ionic-selectable {
+        border: 1px solid var(--ion-color-medium);
+        font-size: 15pt;
+        border-radius: 5px;
+        height: 50px;
+        width: 100%;
+        max-width: unset;
+        position: relative;
+        &.ng-untouched {
+            opacity: 0.5;
+        }
+        .ionic-selectable-value {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .ionic-selectable-icon-inner {
+            left: unset;
+            right: 22px;
+        }
+    }
+}
+
+.input-item-gen {
+    --padding-end: 0;
+    --padding-start: 0;
+    --inner-border-width: 0 0 2px 0;
+    --border-color: #D9D9D9;
+    ion-input {
+        font-size: 15px;
+        --highlight-color-focused: unset;
+        --highlight-color-valid: unset;
+        --highlight-color-invalid: unset;
+        --highlight-color: unset;
+        color: #000000;
+        min-height: 63px !important;
+        .label-text-wrapper {
+            font-size: 17px !important;
+        }
+    }
+    ion-textarea {
+        font-size: 15px;
+        --highlight-color-focused: unset;
+        --highlight-color-valid: unset;
+        --highlight-color-invalid: unset;
+        --highlight-color: unset;
+        color: #000000;
+        min-height: 63px !important;
+        .label-text-wrapper {
+            font-size: 17px !important;
+        }
+    }
+}
+
+.select-image {
+    height: 160px;
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+    border-radius: 15px;
+    border: 1px solid #D9D9D9;
+    ion-icon {
+        font-size: 40px;
+    }
+}
+
+.input-gen-row {
+    height: 55px;
+    border: 1px solid #EDEDED;
+    border-radius: 15px;
+    ion-input {
+        font-size: 12px;
+        --highlight-color-focused: unset;
+        --highlight-color-valid: unset;
+        --highlight-color-invalid: unset;
+        --highlight-color: unset;
+        --padding-start: 20px;
+        --padding-end: 20px;
+        min-height: 55px;
+        color: #8D8D8D;
+    }
+    ion-icon {
+        color: #8D8D8D;
+        font-size: 20px;
+    }
+}
+
+.d-none {
+    display: none;
+}
+
+.input-profile {
+    background: #F5F6F9;
+    border-radius: 9px;
+    width: 100%;
+    height: 54px;
+    ion-input {
+        font-size: 16px;
+        --highlight-color-focused: unset;
+        --highlight-color-valid: unset;
+        --highlight-color-invalid: unset;
+        --highlight-color: unset;
+        --padding-start: 25px;
+        --padding-end: 25px;
+        min-height: 54px;
+    }
+
+    ion-select {
+        font-size: 16px;
+        --highlight-color-focused: unset;
+        --highlight-color-valid: unset;
+        --highlight-color-invalid: unset;
+        --highlight-color: unset;
+        --padding-start: 25px;
+        --padding-end: 25px;
+        min-height: 54px;
+        &::part(icon) {
+            position: absolute;
+            right: 22px;
+        }
+    }
+
+    ionic-selectable {
+        font-size: 16px;
+        height: 54px;
+        width: 100%;
+        max-width: unset;
+        position: relative;
+        &.ng-untouched {
+            opacity: 0.38;
+        }
+        .ionic-selectable-inner {
+            padding-top: 6px;
+        }
+        .ionic-selectable-value {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .ionic-selectable-icon-inner {
+            left: unset;
+            right: 22px;
+        }
+    }
+}
+
+/*margin*/
+.mt-5 {
+    margin-top: 5px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-12 {
+    margin-top: 12px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mt-35 {
+    margin-top: 35px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mt-45 {
+    margin-top: 45px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mt-70 {
+    margin-top: 70px;
+}
+
+.mt-80 {
+    margin-top: 80px;
+}
+
+.mt-120 {
+    margin-top: 120px;
+}
+
+.mt-130 {
+    margin-top: 130px;
+}
+
+.mb-5 {
+    margin-bottom: 5px !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+.mb-12 {
+    margin-bottom: 12px !important;
+}
+
+.mb-13 {
+    margin-bottom: 13px !important;
+}
+
+.mb-15 {
+    margin-bottom: 15px !important;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-35 {
+    margin-bottom: 35px;
+}
+
+.mb-75 {
+    margin-bottom: 75px;
+}
+
+/*padding*/
+.pt-5 {
+    padding-top: 5px;
+}
+
+.pt-10 {
+    padding-top: 10px !important;
+}
+
+.pt-25 {
+    padding-top: 25px;
+}
+
+.pt-40 {
+    padding-top: 40px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.pb-15 {
+    padding-bottom: 15px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+.py-35 {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+/* Font size */
+.fs-pt-15 {
+    font-size: 15pt;
+}
+
+.fs-pt-18 {
+    font-size: 18pt;
+}
+
+.fs-px-11{
+    font-size: 11px;
+}
+
+.fs-px-12 {
+    font-size: 12px;
+}
+
+.fs-px-13 {
+    font-size: 13px;
+}
+
+.fs-px-14 {
+    font-size: 14px;
+}
+
+.fs-px-15 {
+    font-size: 15px;
+}
+
+.fs-px-16 {
+    font-size: 16px;
+}
+
+.fs-px-18 {
+    font-size: 18px;
+}
+
+.fs-px-20 {
+    font-size: 20px;
+}
+
+.fs-px-22 {
+    font-size: 22px;
+}
+
+.fs-px-24 {
+    font-size: 24px;
+}
+
+.fs-px-28 {
+    font-size: 28px;
+}
+
+.fs-px-31 {
+    font-size: 31px;
+}
+
+.fs-px-34 {
+    font-size: 34px;
+}
+
+.fs-px-48 {
+    font-size: 48px;
+}
+
+.custom-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--ion-color-dark);
+    border-radius: 100%;
+    width: 20px;
+    aspect-ratio: 1 / 1;
+    span {
+        color: var(--ion-color-primary-contrast);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-size: 10px;
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+.btn-gen {
+    --padding-top: 19px;
+    --padding-bottom: 19px;
+    --border-radius: 9pt;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    //display: sw </swiper-slidek;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+swiper-container {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .mySwiper {
+    height: 80%;
+    width: 100%;
+  }
+
+  .mySwiper2 {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .mySwiper2 swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .mySwiper2 .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  swiper-slide img {
+    //display: sw </swiper-slidek;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.collapse-gen {
+    font-size: 18px;
+    border-bottom: 1px solid #707070;
+    color: var(--ion-color-dark);
+    ion-icon {
+        color: var(--ion-color-primary);
+    }
+    .secondary {
+        color: var(--ion-color-medium);
+        border-bottom: 1px solid var(--ion-color-medium);
+    }
+}
+
+ion-header {
+    box-shadow: unset !important;
+    ion-toolbar {
+        --border-width: 0 !important;
+        --border-color: 0;
+        box-shadow: unset;
+    }
+}
+
+ion-footer {
+    box-shadow: unset !important;
+    ion-toolbar {
+        --border-width: 0 !important;
+        --border-color: 0;
+        box-shadow: unset;
+    }
+}
+
+.collapse-gen-secondary {
+    font-size: 16px;
+    color: var(--ion-color-medium);
+    //
+    ion-icon {
+        color: var(--ion-color-primary);
+        font-size: 28px;
+    }
+}
+
+ion-menu {
+    --width: 100%;
+}
+
+.with-border-bottom-medium {
+    border-bottom: 0.1px solid var(--ion-color-medium);
+}
+
+.img-radius {    
+    background-size: cover;
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.xy-60 {
+    width: 60px;
+    height: 60px;
+}
+
+.circle {
+    border-radius: 100%;
+}
+
+.border-light {
+    border: 3px solid var(--ion-color-light);
+}
+
+.border-light.with-border-primary::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    background: var(--ion-color-primary);
+    z-index: -1;
+    border-radius: 100%;
+}
+
+.c-primary {
+    --color: var(--ion-color-primary);
+    color: var(--ion-color-primary);
+}
+
+.c-secondary {
+    --color: var(--ion-color-secondary);
+    color: var(--ion-color-secondary);
+}
+
+.c-tertiary {
+    --color: var(--ion-color-tertiary);
+    color: var(--ion-color-tertiary);
+}
+
+.c-medium {
+    --color: var(--ion-color-medium);
+    color: var(--ion-color-medium);
+}
+
+.c-light {
+    --color: var(--ion-color-light);
+    color: var(--ion-color-light);
+}
+
+.c-dark {
+    --color: var(--ion-color-dark);
+    color: var(--ion-color-dark);
+}
+
+.bg-primary {
+    --background: var(--ion-color-primary);
+    background: var(--ion-color-primary);
+}
+
+.bg-medium {
+    --background: var(--ion-color-medium);
+    background: var(--ion-color-medium);
+}
+
+#send-pdf-modal, #save-quote-modal {
+    --background: #00000040;
+}
+
+#img-modal {
+    --background: #00000040;
+    --height: 100vh; /* Alto del modal igual al alto de la pantalla */
+    --width: 100vw; /* Ancho del modal igual al ancho de la pantalla */
+    top: 0; /* Colocar el modal en la parte superior de la pantalla */
+    left: 0; /* Colocar el modal en el borde izquierdo de la pantalla */
+}
+
+ion-modal {
+    --height: 100vh; /* Alto del modal igual al alto de la pantalla */
+    --width: 100vw;
+}
+
+.scroll-gen {
+    padding-bottom: 15px;
+    .scroll-x {
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll-item {
+            cursor: pointer;
+            display: inline-block;
+            margin: 0 5px;
+            position: relative;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.auto {
+    padding: 15px;
+    border: 1px solid #EDEDED;
+    border-radius: 12px;
+    height: 100%;
+    &.active {
+        border: 1px solid var(--ion-color-primary);
+    }
+    .image {
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        background-position-x: center;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        height: 120px;
+    }
+}
+
+.badge-auto {
+    background-color: #F2FDF5;
+    color: #147638;
+    border-radius: 30px;
+    width: fit-content;
+    padding: 7px 15px;
+}
+
+.back-icon {
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+    border: 1px solid #EDEDED;
+    position: relative;
+    ion-icon {
+        font-size: 24px;
+        color: var(--ion-color-tertiary);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}

@@ -1,0 +1,35 @@
+<ion-content color="light">
+
+    <ion-header color="light" mode="md">
+        <ion-toolbar mode="md" color="light">
+            <ion-row style="padding-left: 20px; padding-right: 20px" class="ion-align-items-center">
+                <ion-col class="ion-no-padding titleService" size="auto">
+                    <ion-icon class="fs-px-18 titleService c-dark" (click)="glbFunc.irPage('register-payment')" name="chevron-back"></ion-icon>
+                </ion-col>
+                <ion-col class="ion-no-padding titleService ion-text-center fs-px-18 f-regular c-dark" css="margin-bottom">
+                </ion-col>
+            </ion-row>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content style="text-align: center; align-items: center;">
+
+        <!-- Nueva sección agregada para la confirmación -->
+        <ion-card class="ion-text-center"style="margin-top: 25px; box-shadow: none; border: none;">
+            <ion-icon name="checkmark-circle-outline" style="font-size: 100px; color: green;"></ion-icon>
+            <ion-card-header>
+                <ion-card-title style="font-size: 24px;">¡Felicidades!</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-text style="font-size: 16px;">
+                    Has registrado un nuevo pago para el cliente “Manuel Rodríguez”. Descarga el ticket actualizado.
+                </ion-text>
+            </ion-card-content>
+        </ion-card>
+
+        <ion-button color="primary" class="confirm-button">Descargar Ticket</ion-button>
+
+        <ion-button expand="block" fill="clear" color="medium" class="cancel-button" (click)="glbFunc.irPage('home')">Volver a Inicio</ion-button>
+
+    </ion-content>
+</ion-content>

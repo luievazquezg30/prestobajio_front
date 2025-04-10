@@ -1,0 +1,75 @@
+<ion-header mode="ios" color="light">
+    <ion-toolbar mode="ios" color="light">
+        <ion-row class="ion-align-items-center mt-10">
+            <ion-col size="auto" class="ion-no-padding" style="padding-left: 16px;">
+                <div (click)="glbFunc.back()" class="back-icon">
+                    <ion-icon name="chevron-back"></ion-icon>
+                </div>
+            </ion-col>
+            <ion-col class="ion-no-padding ion-text-center">
+                <div class="fs-px-18 c-dark f-semibold">Crear Nota</div>
+            </ion-col>
+            <ion-col size="auto" class="ion-no-padding invisible" style="padding-right: 16px;">
+                <div class="back-icon">
+                    <ion-icon name="chevron-back"></ion-icon>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+<ion-content id="main-content" color="light">
+    <div class="ion-text-center" *ngIf="isLoading">
+        <ion-spinner
+        ></ion-spinner>
+    </div>
+    <div class="pad-25-x" *ngIf="!isLoading">
+        <div *ngIf="tab == 1">
+            <div class="f-semibold fs-px-15 mt-50" style="color: #4E4E4E;">Selecciona una unidad</div>
+            <ion-row class="mt-20">
+                <ion-col size="6" class="ion-no-padding mb-15" *ngFor="let car of cars; let i = index"
+                [style.padding-right.px]="i % 2 === 0 ? 6 : 0" 
+                [style.padding-left.px]="i % 2 !== 0 ? 6 : 0">
+                    <div class="auto" (click)="carSelect = car" [ngClass]="carSelect && carSelect.id == car.id ? 'active' : ''">
+                        <div class="image" style="background-image: url('{{car.photo}}');"></div>
+                        <div class="mt-15 c-tertiary fs-px-14 f-bold">{{car.name}}</div>
+                        <div class="mt-10 c-secondary fs-px-14 f-medium">Placa: {{car.plate}} </div>
+                        <div class="mt-15" style="background: #EDEDED; height: 1px; width: 100%;"></div>
+                        <div class="mt-10 badge-auto f-medium fs-px-14">Activa</div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div *ngIf="tab == 2">
+            <div class="f-semibold fs-px-15 mt-50" style="color: #4E4E4E;">Detalles de Nota</div>
+            <ion-item mode="ios" class="input-item-gen mt-40">
+                <ion-input mode="ios" class="f-medium" label="Servicio Ofrecido" labelPlacement="stacked" placeholder="Servicio Ofrecido" [(ngModel)]="name"></ion-input>
+            </ion-item>
+            <ion-item mode="ios" class="input-item-gen mt-20">
+                <ion-input mode="ios" type="date" class="f-medium" label="Fecha Asignada" labelPlacement="stacked" placeholder="Fecha Asignada" [(ngModel)]="arrival_date"></ion-input>
+            </ion-item>
+            <ion-item mode="ios" class="input-item-gen mt-20">
+                <ion-input mode="ios" class="f-medium" label="Fecha Aproximada de Operación" type="date" labelPlacement="stacked" placeholder="Fecha Aproximada de Operación" [(ngModel)]="service_date"></ion-input>
+            </ion-item>
+            <ion-item mode="ios" class="input-item-gen mt-20">
+                <ion-input mode="ios" class="f-medium" type="number" label="Costo de Factura" labelPlacement="stacked" placeholder="Costo de Factura" [(ngModel)]="price"></ion-input>
+            </ion-item>
+            <ion-item mode="ios" class="input-item-gen mt-20">
+                <ion-textarea mode="ios" class="f-medium" label="Descripción" labelPlacement="stacked" placeholder="Descripción" [(ngModel)]="description" rows="5"></ion-textarea>
+            </ion-item>
+            <div class="mt-20 c-dark fs-px-14">
+                Imagen de la nota
+            </div>
+            <div class="select-image mb-20">
+                <ion-icon class="center-page c-dark" name="camera-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+</ion-content>
+<ion-footer mode="ios" color="light">
+    <ion-toolbar mode="ios" color="light">
+        <div class="pad-25-x">
+            <ion-button *ngIf="tab == 1" [disabled]="!carSelect" (click)="tab = 2" class="f-semibold fs-px-15" color="primary" expand="full" mode="ios" shape="round">Comenzar</ion-button>
+            <ion-button *ngIf="tab == 2"  (click)="save()" class="f-semibold fs-px-15" color="primary" expand="full" mode="ios" shape="round">Guardar Nota</ion-button>
+        </div>
+    </ion-toolbar>
+</ion-footer>

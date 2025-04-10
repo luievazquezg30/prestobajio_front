@@ -1,0 +1,30 @@
+<ion-content color="light">
+
+    <ion-header color="light" mode="md">
+        <ion-toolbar mode="md" color="light">
+            <ion-row style="padding-left: 20px; padding-right: 20px" class="ion-align-items-center">
+                <ion-col class="ion-no-padding titleService" size="auto">
+                    <ion-icon class="fs-px-18 titleService c-dark" (click)="glbFunc.irPage('home')"
+                        name="chevron-back"></ion-icon>
+                </ion-col>
+                <ion-col class="ion-no-padding titleService ion-text-center fs-px-18 f-regular c-dark"
+                    css="margin-bottom">
+                    Registrar Pago
+                </ion-col>
+            </ion-row>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content style="text-align: center; align-items: center;">
+
+        <ion-item style="margin-bottom: 200px; margin-top: 25px;">
+            <ion-label style="font-size: 15px;" position="stacked">Cantidad</ion-label>
+            <ion-input style="font-size: 15px;" type="number" value="2500.00" placeholder="$0.00" readonly></ion-input>
+        </ion-item>
+
+        <ion-button (click)="glbFunc.irPage('/appointment-confirmation')" color="primary" class="confirm-button">Confirmar Pago</ion-button>
+
+        <ion-button expand="block" fill="clear" color="medium" class="cancel-button">Cancelar</ion-button>
+
+    </ion-content>
+</ion-content>

@@ -1,0 +1,83 @@
+<ion-content color="light">
+    <ion-header color="light" mode="md">
+        <ion-toolbar mode="md" color="light">
+          <ion-row style="padding-left: 20px; padding-right: 20px" class="ion-align-items-center">
+            <ion-col class="ion-no-padding titleService" size="auto">
+              <ion-icon class="fs-px-18 titleService c-dark" (click)="glbFunc.irPage('home')" name="chevron-back"></ion-icon>
+            </ion-col>
+            <ion-col class="ion-no-padding titleService ion-text-center fs-px-18 f-regular c-dark" css="margin-bottom">
+              Ticket del cliente
+            </ion-col>
+          </ion-row>
+        </ion-toolbar>
+
+      </ion-header>
+      <div style="text-align: center; align-items: center;">
+        <ion-list style="margin-left: 20px; margin-top: 20px; margin-right: 20px; border: none; ">
+          <ion-item>      
+            <ion-label>
+              07/10/24
+            </ion-label>
+            
+            <ion-badge class="badge-green" ><ion-icon src="assets/img/ic-palomita.svg"></ion-icon>$350.00</ion-badge>
+          </ion-item>
+
+          <ion-item>      
+            <ion-label>
+              07/10/24
+            </ion-label>
+            
+            <ion-badge class="badge-green"><ion-icon src="assets/img/ic-palomita.svg"></ion-icon>$350.00</ion-badge>
+          </ion-item>
+
+          <ion-item>      
+            <ion-label>
+              07/10/24
+            </ion-label>
+            
+            <ion-badge class="badge-green"><ion-icon src="assets/img/ic-palomita.svg"></ion-icon>$350.00</ion-badge>
+
+          </ion-item>
+          <ion-item>      
+            <ion-label>
+              07/10/24
+            </ion-label>
+            
+            <ion-badge class="badge-red"><ion-icon src="assets/img/ic-x.svg"></ion-icon>$350.00</ion-badge>
+          </ion-item>
+
+          <ion-item>      
+            <ion-label>
+              07/10/24
+            </ion-label>
+            
+            <ion-badge class="badge-yellow"><ion-icon name="remove" style="color: #FF9900;"></ion-icon>$350.00</ion-badge>
+          </ion-item>
+        </ion-list>
+
+        <ion-list lines="none" style="margin-top: 22px;">
+          <ion-item>      
+            <ion-label style="margin-left: 18px;">
+              Semanas por cobrar
+            </ion-label>
+            
+            <ion-badge class="badge-semanas">1 Semana</ion-badge>
+          </ion-item>
+
+          <ion-item>      
+            <ion-label style="margin-left: 18px;">
+              Semanas Fallidas
+            </ion-label>
+            
+            <ion-badge class="badge-semanas">1 Semana</ion-badge>
+          </ion-item>
+
+        </ion-list>
+
+        
+      </div>
+      <ion-footer style="margin-left: 8%;">
+        <ion-button (click)="glbFunc.irPage('/commissions-list')" class="f-semibold fs-px-15 mt-120" color="primary" style="width: 80%;" mode="ios"
+                    shape="round"><ion-icon name="cog-outline"></ion-icon>Registrar Pago</ion-button>
+      </ion-footer>
+</ion-content>
